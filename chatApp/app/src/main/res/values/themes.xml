@@ -1,0 +1,64 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.ChatApp" parent="Theme.Material3.DayNight">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryVariant">@color/primary_dark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/accent_color</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:windowBackground">@color/background_light</item>
+    </style>
+    
+    <!-- Splash screen theme -->
+    <style name="Theme.ChatApp.Splash" parent="Theme.ChatApp">
+        <item name="android:windowBackground">@drawable/splash_background</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    
+    <!-- Custom button style -->
+    <style name="CustomButton" parent="Widget.Material3.Button">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="cornerRadius">8dp</item>
+    </style>
+    
+    <!-- Custom EditText style -->
+    <style name="CustomEditText" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginBottom">16dp</item>
+    </style>
+    
+    <!-- Message bubble styles -->
+    <style name="SentMessageBubble">
+        <item name="android:background">@drawable/sent_message_bg</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginStart">64dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    
+    <style name="ReceivedMessageBubble">
+        <item name="android:background">@drawable/received_message_bg</item>
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">64dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+    
+    <!-- Circular image view style -->
+    <style name="CircularImageView">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+</resources>
+

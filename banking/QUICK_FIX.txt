@@ -1,0 +1,63 @@
+═══════════════════════════════════════════════════════════════
+   🔥 QUICK FIX FOR 401 LOGIN ERROR
+═══════════════════════════════════════════════════════════════
+
+✅ User exists: test@smartbank.com
+✅ Password works: Test123!
+✅ Database connected
+✅ Code fixed
+
+❌ Problem: Backend server not restarted!
+
+═══════════════════════════════════════════════════════════════
+   🚀 FIX IN 3 STEPS:
+═══════════════════════════════════════════════════════════════
+
+STEP 1: Stop Backend
+--------------------
+In your backend terminal, press:
+Ctrl+C
+
+
+STEP 2: Restart Backend
+-----------------------
+cd backend
+npm run dev
+
+Wait for:
+✅ Connected to MongoDB
+🚀 Server running on port 5000
+
+
+STEP 3: Login
+-------------
+Go to: http://localhost:5173
+
+Email: test@smartbank.com
+Password: Test123!
+
+Click "Sign In"
+
+✅ DONE!
+
+═══════════════════════════════════════════════════════════════
+   🎯 If Still Not Working:
+═══════════════════════════════════════════════════════════════
+
+Clear browser cache:
+Press F12 → Application → Clear site data
+
+Or use Incognito mode
+
+═══════════════════════════════════════════════════════════════
+   📊 Debug Commands (if needed):
+═══════════════════════════════════════════════════════════════
+
+cd backend
+
+npm run check-users     (see all users)
+npm run test-login      (test password)
+npm run create-user     (create new test user)
+
+═══════════════════════════════════════════════════════════════
+

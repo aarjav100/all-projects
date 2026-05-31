@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #0D1117;
+  --color-surface: #0F172A;
+  --color-border: #1E293B;
+  
+  --color-accent: #3B82F6;
+  --color-accent-light: #00D4FF;
+  
+  --color-profit: #10B981;
+  --color-profit-neon: #00FF88;
+  
+  --color-loss: #EF4444;
+  --color-loss-neon: #FF3B3B;
+
+  --color-neutral: #F59E0B;
+  
+  --color-text-primary: #E2E8F0;
+  --color-text-muted: #64748B;
+
+  --font-mono: "JetBrains Mono", monospace;
+  --font-sans: "Inter", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-text-primary font-sans antialiased selection:bg-accent/30;
+  }
+  
+  /* Reset default rounding for sharp pro look */
+  * {
+    border-radius: 0px !important;
+  }
+}
+
+@layer utilities {
+  .glow-accent {
+    box-shadow: 0 0 15px rgba(59, 130, 246, 0.4);
+  }
+  .glow-profit {
+    box-shadow: 0 0 15px rgba(0, 255, 136, 0.4);
+  }
+  .glow-loss {
+    box-shadow: 0 0 15px rgba(255, 59, 59, 0.4);
+  }
+  
+  .pro-card {
+    @apply bg-surface border border-border;
+  }
+
+  .slot-machine {
+    transition: transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .fade-slide-up {
+    animation: fadeSlideUp 0.2s ease-out forwards;
+  }
+
+  @keyframes fadeSlideUp {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Skeleton animation */
+  .skeleton {
+    @apply bg-border relative overflow-hidden;
+  }
+  .skeleton::after {
+    content: "";
+    @apply absolute inset-0 -translate-x-full;
+    background-image: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+    animation: shimmer 1.5s infinite;
+  }
+  @keyframes shimmer {
+    100% { transform: translateX(100%); }
+  }
+  
+  /* Scrollbar override for dashboard look */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: var(--color-background);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-border);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-text-muted);
+  }
+}

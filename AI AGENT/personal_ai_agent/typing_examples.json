@@ -1,0 +1,36 @@
+{
+    "examples": [
+        {
+            "description": "Type text at current cursor position",
+            "instruction": {
+                "action": "type_text",
+                "text": "Hello, this is my AI agent typing!"
+            }
+        },
+        {
+            "description": "Move cursor to specific coordinates",
+            "instruction": {
+                "action": "move_cursor",
+                "x": 500,
+                "y": 300
+            }
+        },
+        {
+            "description": "Click at specific coordinates",
+            "instruction": {
+                "action": "click_position",
+                "x": 500,
+                "y": 300
+            }
+        },
+        {
+            "description": "Move to position and type text (most useful)",
+            "instruction": {
+                "action": "type_at_position",
+                "text": "This text will be typed at the specified location",
+                "x": 500,
+                "y": 300
+            }
+        }
+    ]
+} 

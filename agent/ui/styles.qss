@@ -1,0 +1,309 @@
+/* 
+ * AI Screen-Reader Assistant - Dark Theme Stylesheet
+ * Modern glassmorphism design with accessibility in mind
+ */
+
+/* ================================
+   Global Styles
+   ================================ */
+* {
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+}
+
+QMainWindow, QWidget {
+    background-color: #1a1a2e;
+    color: #eaeaea;
+}
+
+/* ================================
+   Main Window
+   ================================ */
+#MainWindow {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 1, y2: 1,
+        stop: 0 #1a1a2e,
+        stop: 1 #16213e
+    );
+}
+
+/* ================================
+   Buttons
+   ================================ */
+QPushButton {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #6366f1,
+        stop: 1 #4f46e5
+    );
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    min-width: 100px;
+}
+
+QPushButton:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #818cf8,
+        stop: 1 #6366f1
+    );
+}
+
+QPushButton:pressed {
+    background: #4338ca;
+}
+
+QPushButton:disabled {
+    background: #374151;
+    color: #6b7280;
+}
+
+/* Secondary Button */
+QPushButton#secondaryBtn {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+QPushButton#secondaryBtn:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Danger Button */
+QPushButton#dangerBtn {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #ef4444,
+        stop: 1 #dc2626
+    );
+}
+
+QPushButton#dangerBtn:hover {
+    background: qlineargradient(
+        x1: 0, y1: 0, x2: 0, y2: 1,
+        stop: 0 #f87171,
+        stop: 1 #ef4444
+    );
+}
+
+/* ================================
+   Text Areas
+   ================================ */
+QTextEdit, QPlainTextEdit {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 16px;
+    color: #eaeaea;
+    font-size: 14px;
+    line-height: 1.6;
+    selection-background-color: #6366f1;
+}
+
+QTextEdit:focus, QPlainTextEdit:focus {
+    border: 1px solid #6366f1;
+    background-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   Labels
+   ================================ */
+QLabel {
+    color: #eaeaea;
+}
+
+QLabel#titleLabel {
+    font-size: 24px;
+    font-weight: 700;
+    color: white;
+    padding: 8px 0;
+}
+
+QLabel#subtitleLabel {
+    font-size: 14px;
+    color: #9ca3af;
+}
+
+QLabel#sectionLabel {
+    font-size: 16px;
+    font-weight: 600;
+    color: #a5b4fc;
+    padding: 8px 0 4px 0;
+}
+
+/* Status Labels */
+QLabel#statusSuccess {
+    color: #34d399;
+    font-weight: 500;
+}
+
+QLabel#statusWarning {
+    color: #fbbf24;
+    font-weight: 500;
+}
+
+QLabel#statusError {
+    color: #f87171;
+    font-weight: 500;
+}
+
+/* ================================
+   Panels / Cards
+   ================================ */
+QFrame#card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+QFrame#glassPanel {
+    background: rgba(99, 102, 241, 0.1);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: 16px;
+}
+
+/* ================================
+   Scroll Areas
+   ================================ */
+QScrollArea {
+    border: none;
+    background: transparent;
+}
+
+QScrollBar:vertical {
+    background: rgba(255, 255, 255, 0.05);
+    width: 8px;
+    border-radius: 4px;
+    margin: 0;
+}
+
+QScrollBar::handle:vertical {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    min-height: 40px;
+}
+
+QScrollBar::handle:vertical:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+QScrollBar::add-line:vertical,
+QScrollBar::sub-line:vertical {
+    height: 0;
+}
+
+/* ================================
+   Splitter
+   ================================ */
+QSplitter::handle {
+    background: rgba(255, 255, 255, 0.1);
+    width: 2px;
+}
+
+QSplitter::handle:hover {
+    background: #6366f1;
+}
+
+/* ================================
+   Tab Widget
+   ================================ */
+QTabWidget::pane {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+QTabBar::tab {
+    background: transparent;
+    color: #9ca3af;
+    padding: 12px 24px;
+    border-bottom: 2px solid transparent;
+    font-weight: 500;
+}
+
+QTabBar::tab:selected {
+    color: white;
+    border-bottom: 2px solid #6366f1;
+}
+
+QTabBar::tab:hover:!selected {
+    color: #d1d5db;
+}
+
+/* ================================
+   Tool Tips
+   ================================ */
+QToolTip {
+    background-color: #1e1e2e;
+    color: white;
+    border: 1px solid #6366f1;
+    border-radius: 6px;
+    padding: 8px 12px;
+    font-size: 13px;
+}
+
+/* ================================
+   History List
+   ================================ */
+QListWidget {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+QListWidget::item {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 12px;
+    margin: 4px 0;
+    color: #eaeaea;
+}
+
+QListWidget::item:selected {
+    background: rgba(99, 102, 241, 0.3);
+    border: 1px solid rgba(99, 102, 241, 0.5);
+}
+
+QListWidget::item:hover:!selected {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* ================================
+   Floating Widget Specific
+   ================================ */
+#FloatingWidget {
+    background: rgba(26, 26, 46, 0.95);
+    border: 1px solid rgba(99, 102, 241, 0.3);
+    border-radius: 25px;
+}
+
+#FloatingWidget QPushButton {
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 8px;
+    min-width: 40px;
+    min-height: 40px;
+}
+
+#FloatingWidget QPushButton:hover {
+    background: rgba(99, 102, 241, 0.3);
+}
+
+/* ================================
+   Image Preview
+   ================================ */
+#imagePreview {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px dashed rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    min-height: 200px;
+}
+
+#imagePreview:hover {
+    border-color: rgba(99, 102, 241, 0.5);
+}

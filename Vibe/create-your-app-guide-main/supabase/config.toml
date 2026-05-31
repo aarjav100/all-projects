@@ -1,0 +1,10 @@
+project_id = "gpjsvektcrjdohnfdeuk"
+
+[functions.analyze-mood]
+verify_jwt = false
+
+[functions.summarize-comments]
+verify_jwt = false
+
+[functions.update-trust-score]
+verify_jwt = false

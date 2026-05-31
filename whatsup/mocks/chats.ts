@@ -1,0 +1,160 @@
+import { Chat, Status } from '@/types/chat';
+
+export const CURRENT_USER = {
+  id: 'currentUser',
+  name: 'You',
+  phoneNumber: '7599863191',
+  avatar: 'https://i.pravatar.cc/150?u=currentUser',
+  isOnline: true,
+  about: 'Hey there! I am using WhatsApp.',
+};
+
+export const MOCK_CHATS: Chat[] = [
+  {
+    id: '1',
+    user: {
+      id: 'u1',
+      name: 'John Doe',
+      phoneNumber: '1234567890',
+      avatar: 'https://i.pravatar.cc/150?u=u1',
+      isOnline: true,
+      about: 'Available',
+      lastSeen: 'online',
+    },
+    unreadCount: 2,
+    isPinned: true,
+    lastMessage: {
+      id: 'm1',
+      text: 'Hey, how are you?',
+      timestamp: '10:30 AM',
+      senderId: 'u1',
+      isRead: false,
+      type: 'text',
+    },
+    messages: [
+      { id: 'm0', text: 'Hi there!', timestamp: '10:28 AM', senderId: 'currentUser', isRead: true, type: 'text' },
+      { id: 'm1', text: 'Hey, how are you?', timestamp: '10:30 AM', senderId: 'u1', isRead: false, type: 'text' },
+    ],
+  },
+  {
+    id: '2',
+    user: {
+      id: 'u2',
+      name: 'Jane Smith',
+      phoneNumber: '0987654321',
+      avatar: 'https://i.pravatar.cc/150?u=u2',
+      isOnline: false,
+      lastSeen: 'last seen today at 9:15 AM',
+    },
+    unreadCount: 0,
+    lastMessage: {
+      id: 'm2',
+      text: 'See you later! 👋',
+      timestamp: 'Yesterday',
+      senderId: 'currentUser',
+      isRead: true,
+      type: 'text',
+    },
+    messages: [
+      { id: 'm2', text: 'See you later! 👋', timestamp: 'Yesterday', senderId: 'currentUser', isRead: true, type: 'text' },
+    ],
+  },
+  {
+    id: '3',
+    user: {
+      id: 'u3',
+      name: 'Priya Sharma',
+      phoneNumber: '9876543210',
+      avatar: 'https://i.pravatar.cc/150?u=u3',
+      isOnline: true,
+      about: 'Busy',
+    },
+    unreadCount: 5,
+    lastMessage: {
+      id: 'm3',
+      text: '📷 Photo',
+      timestamp: '9:15 AM',
+      senderId: 'u3',
+      isRead: false,
+      type: 'image',
+      mediaUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
+    },
+    messages: [
+      { id: 'm3', text: '📷 Photo', timestamp: '9:15 AM', senderId: 'u3', isRead: false, type: 'image', mediaUrl: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400' },
+    ],
+  },
+  {
+    id: 'group1',
+    isGroup: true,
+    groupName: '🏠 Family Group',
+    groupAvatar: 'https://i.pravatar.cc/150?u=group1',
+    groupMembers: [],
+    user: { id: 'group1', name: 'Family Group', phoneNumber: '', avatar: 'https://i.pravatar.cc/150?u=group1', isOnline: false },
+    unreadCount: 3,
+    lastMessage: {
+      id: 'm4',
+      text: 'Dinner tonight? 🍽️',
+      timestamp: '8:00 AM',
+      senderId: 'u2',
+      isRead: false,
+      type: 'text',
+    },
+    messages: [
+      { id: 'm4', text: 'Dinner tonight? 🍽️', timestamp: '8:00 AM', senderId: 'u2', isRead: false, type: 'text' },
+    ],
+  },
+  {
+    id: '4',
+    user: {
+      id: 'u4',
+      name: 'Rahul Kumar',
+      phoneNumber: '8765432109',
+      avatar: 'https://i.pravatar.cc/150?u=u4',
+      isOnline: false,
+      lastSeen: 'last seen yesterday at 11:30 PM',
+    },
+    unreadCount: 0,
+    isMuted: true,
+    lastMessage: {
+      id: 'm5',
+      text: '🎤 Voice message',
+      timestamp: 'Monday',
+      senderId: 'u4',
+      isRead: true,
+      type: 'voice',
+      duration: 12,
+    },
+    messages: [],
+  },
+];
+
+export const MOCK_STATUSES: Status[] = [
+  {
+    id: 's1',
+    user: { id: 'u1', name: 'John Doe', phoneNumber: '1234567890', avatar: 'https://i.pravatar.cc/150?u=u1', isOnline: true },
+    content: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600',
+    type: 'image',
+    timestamp: '2 minutes ago',
+    viewers: [],
+    expiresAt: '',
+  },
+  {
+    id: 's2',
+    user: { id: 'u3', name: 'Priya Sharma', phoneNumber: '9876543210', avatar: 'https://i.pravatar.cc/150?u=u3', isOnline: true },
+    content: 'https://images.unsplash.com/photo-1501854140801-50d01698950b?w=600',
+    type: 'image',
+    timestamp: '1 hour ago',
+    viewers: [],
+    expiresAt: '',
+  },
+  {
+    id: 's3',
+    user: { id: 'u2', name: 'Jane Smith', phoneNumber: '0987654321', avatar: 'https://i.pravatar.cc/150?u=u2', isOnline: false },
+    content: '🌟 Having a great day!',
+    type: 'text',
+    backgroundColor: '#FF6B6B',
+    timestamp: '3 hours ago',
+    viewers: [],
+    expiresAt: '',
+  },
+];

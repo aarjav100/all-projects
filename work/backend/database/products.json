@@ -1,0 +1,110 @@
+[
+  {
+    "id": "mptnor35vd3c7",
+    "createdAt": "2026-05-31T10:47:53.633Z",
+    "name": "Lumina SoundWave ANC",
+    "description": "Premium active noise-cancelling headphones featuring 40mm custom bio-cellulose drivers, 45-hour battery life, and exquisite tactile aluminum controls.",
+    "price": 299.99,
+    "category": "Audio",
+    "image": "/images/soundwave.webp",
+    "rating": 4.8,
+    "reviewCount": 142,
+    "stock": 15,
+    "features": [
+      "Custom Active Noise Cancelling",
+      "45 Hours Battery Life (ANC Off)",
+      "Hi-Res Audio Certified",
+      "Premium Alcantara Earcups"
+    ]
+  },
+  {
+    "id": "mptnor3ey1p88",
+    "createdAt": "2026-05-31T10:47:53.642Z",
+    "name": "AuraFlow Keyboard",
+    "description": "A stunning, hot-swappable 75% mechanical keyboard housed in a CNC-milled polycarbonate body with frosted RGB underglow and silent linear switches.",
+    "price": 189.99,
+    "category": "Peripherals",
+    "image": "/images/auraflow.webp",
+    "rating": 4.9,
+    "reviewCount": 88,
+    "stock": 10,
+    "features": [
+      "CNC Polycarbonate Case",
+      "Hot-Swappable Silent Linear Switches",
+      "Frosted RGB Underglow & Backlighting",
+      "Triple-mode (Wireless/Bluetooth/USB-C)"
+    ]
+  },
+  {
+    "id": "mptnor3is2uxs",
+    "createdAt": "2026-05-31T10:47:53.646Z",
+    "name": "Chronos Minimalist Watch",
+    "description": "An architectural minimalist quartz watch featuring a surgical-grade stainless steel casing, sapphire crystal glass, and a sleek matte-black mesh band.",
+    "price": 245,
+    "category": "Lifestyle",
+    "image": "/images/chronos.webp",
+    "rating": 4.7,
+    "reviewCount": 64,
+    "stock": 8,
+    "features": [
+      "Surgical-Grade Stainless Steel",
+      "Scratch-Resistant Sapphire Crystal Dome",
+      "Swiss Quartz Movement",
+      "5 ATM Water Resistance"
+    ]
+  },
+  {
+    "id": "mptnor3zd5iem",
+    "createdAt": "2026-05-31T10:47:53.663Z",
+    "name": "Nebula Ambient Lamp",
+    "description": "An interactive, glassmorphic ambient desk lamp that pulses colors in sync with sound or ambient lighting, controllable via standard touch slider or web API.",
+    "price": 129.99,
+    "category": "Home Tech",
+    "image": "/images/nebula.webp",
+    "rating": 4.6,
+    "reviewCount": 105,
+    "stock": 12,
+    "features": [
+      "Multi-zone Frosted Glass Diffuser",
+      "Touch-sensitive Slide Dimming",
+      "Dynamic Smart Ambient Sync Mode",
+      "Premium Solid Walnut Wood Base"
+    ]
+  },
+  {
+    "id": "mptnor5aqwt3y",
+    "createdAt": "2026-05-31T10:47:53.710Z",
+    "name": "Apex RFID Cardholder",
+    "description": "Minimalist front-pocket leather cardholder crafted from premium full-grain Italian leather and featuring integrated aluminum RFID-blocking shield.",
+    "price": 59.99,
+    "category": "Lifestyle",
+    "image": "/images/apex.webp",
+    "rating": 4.5,
+    "reviewCount": 210,
+    "stock": 30,
+    "features": [
+      "Premium Full-Grain Italian Leather",
+      "Integrated Aluminum RFID Shielding",
+      "Ergonomic Quick-Access Card Trigger",
+      "Ultra-Slim Holds up to 8 Cards"
+    ]
+  },
+  {
+    "id": "mptnor5lxxyil",
+    "createdAt": "2026-05-31T10:47:53.721Z",
+    "name": "Veloce Wood Charger",
+    "description": "High-speed 15W Qi-certified wireless charging pad embedded in an elegant block of solid, hand-finished American Walnut wood with a braided nylon cord.",
+    "price": 79.99,
+    "category": "Lifestyle",
+    "image": "/images/veloce.webp",
+    "rating": 4.8,
+    "reviewCount": 77,
+    "stock": 20,
+    "features": [
+      "Qi-certified 15W Wireless Fast Charge",
+      "Solid Hand-Finished American Walnut",
+      "Aircraft-Grade Anodized Aluminum Base",
+      "1.5m Premium Braided USB-C Cable"
+    ]
+  }
+]

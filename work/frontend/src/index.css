@@ -1,0 +1,160 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ═══════════════════════════════════════════
+   LUXE — Global Design System
+   ═══════════════════════════════════════════ */
+
+@layer base {
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    @apply antialiased;
+  }
+
+  ::selection {
+    background: rgba(201, 168, 76, 0.2);
+    color: #c9a84c;
+  }
+}
+
+/* ── Custom scrollbar ── */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(201, 168, 76, 0.3);
+  border-radius: 99px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(201, 168, 76, 0.6);
+}
+
+/* ── Range input gold accent ── */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #c9a84c;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.4);
+  transition: transform 0.15s ease;
+}
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  border-radius: 99px;
+  height: 6px;
+}
+
+/* ── Utility: hide scrollbar ── */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* ── Glassmorphism utility ── */
+.glass {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+.dark .glass {
+  background: rgba(14, 14, 14, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ── Gold gradient text ── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #c9a84c, #f0d080, #a8893d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── Animated gradient border ── */
+@keyframes borderRotate {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gold-border-animated {
+  background: linear-gradient(270deg, #c9a84c, #a8893d, #f0d080, #c9a84c);
+  background-size: 400% 400%;
+  animation: borderRotate 4s ease infinite;
+}
+
+/* ── Product card hover lift ── */
+.product-card {
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+              box-shadow 0.3s ease;
+}
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+}
+
+/* ── Smooth page transitions ── */
+.page-enter {
+  opacity: 0;
+  transform: translateY(12px);
+}
+.page-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* ── Input focus gold ring ── */
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(201, 168, 76, 0.2);
+}
+
+/* ── Framer motion fixes ── */
+[data-framer-motion] {
+  will-change: transform, opacity;
+}
+
+/* ── Loading shimmer ── */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg,
+    rgba(201, 168, 76, 0.04) 25%,
+    rgba(201, 168, 76, 0.10) 50%,
+    rgba(201, 168, 76, 0.04) 75%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.8s ease-in-out infinite;
+}

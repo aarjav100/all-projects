@@ -1,0 +1,58 @@
+{
+    "examples": [
+        {
+            "description": "Open a website",
+            "instruction": {
+                "prompt": "Open https://chat.openai.com"
+            }
+        },
+        {
+            "description": "Open an application",
+            "instruction": {
+                "prompt": "Open Chrome"
+            }
+        },
+        {
+            "description": "Type text",
+            "instruction": {
+                "prompt": "Type Hello World"
+            }
+        },
+        {
+            "description": "Move cursor",
+            "instruction": {
+                "prompt": "Move cursor to position 500, 300"
+            }
+        },
+        {
+            "description": "Click at position",
+            "instruction": {
+                "prompt": "Click at position 400, 200"
+            }
+        },
+        {
+            "description": "Type at specific position",
+            "instruction": {
+                "prompt": "Type Hello at position 600, 400"
+            }
+        },
+        {
+            "description": "Launch Notepad",
+            "instruction": {
+                "prompt": "Launch Notepad"
+            }
+        },
+        {
+            "description": "Go to Google",
+            "instruction": {
+                "prompt": "Go to https://google.com"
+            }
+        },
+        {
+            "description": "Write a message",
+            "instruction": {
+                "prompt": "Write This is a test message"
+            }
+        }
+    ]
+} 

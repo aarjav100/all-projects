@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} — Report</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --font: 'Inter', sans-serif;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --sidebar-bg: #f9fafb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); }
+    .layout { display: flex; min-height: 100vh; }
+    .sidebar { width: 260px; background: var(--sidebar-bg); border-right: 1px solid var(--border); padding: 2rem 1.5rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; flex-shrink: 0; }
+    .sidebar h2 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); margin-bottom: 1rem; }
+    .toc a { display: block; color: var(--text); text-decoration: none; padding: 0.4rem 0; font-size: 0.9rem; border-left: 2px solid transparent; padding-left: 0.75rem; transition: all 0.15s; }
+    .toc a:hover { color: var(--primary); border-left-color: var(--primary); }
+    .report { flex: 1; padding: 3rem 3.5rem; max-width: 820px; }
+    .report-header { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 2px solid var(--primary); }
+    .badge { display: inline-block; background: var(--primary); color: white; padding: 0.25rem 0.75rem; border-radius: 999px; font-size: 0.75rem; font-weight: 600; margin-bottom: 1rem; }
+    h1 { font-size: 2rem; font-weight: 700; line-height: 1.3; }
+    .exec-summary { background: linear-gradient(135deg, #eef2ff, #f5f3ff); border-radius: 12px; padding: 1.5rem 2rem; margin: 2rem 0; }
+    .exec-summary h2 { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 0.75rem; }
+    .exec-summary p { line-height: 1.7; }
+    .key-topics { margin: 2rem 0; }
+    .key-topics h2 { font-size: 1rem; font-weight: 600; color: var(--text); margin-bottom: 0.75rem; }
+    .key-topics ul { list-style: none; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .key-topics li { background: #ede9fe; color: #4f46e5; padding: 0.3rem 0.85rem; border-radius: 999px; font-size: 0.85rem; font-weight: 500; }
+    .content p { line-height: 1.8; margin-bottom: 1.25rem; color: var(--text); }
+    @media (max-width: 768px) { .layout { flex-direction: column; } .sidebar { width: 100%; height: auto; position: static; } .report { padding: 1.5rem; } }
+  </style>
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <h2>Contents</h2>
+      <nav class="toc">
+        <a href="#summary">Executive Summary</a>
+        <a href="#topics">Key Topics</a>
+        <a href="#content">Report Content</a>
+      </nav>
+    </aside>
+    <main class="report">
+      <div class="report-header">
+        <span class="badge">Report</span>
+        <h1>{{TITLE}}</h1>
+      </div>
+
+      <div id="summary" class="exec-summary">
+        <h2>Executive Summary</h2>
+        <p>{{EXECUTIVE_SUMMARY}}</p>
+      </div>
+
+      <div id="topics" class="key-topics">
+        <h2>Key Topics</h2>
+        <ul>{{KEY_TOPICS}}</ul>
+      </div>
+
+      <div id="content">{{CONTENT}}</div>
+    </main>
+  </div>
+</body>
+</html>

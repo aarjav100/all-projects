@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{TITLE}} — Article</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #6366f1;
+      --bg: #ffffff;
+      --text: #1f2937;
+      --font: 'Merriweather', Georgia, serif;
+      --ui-font: 'Inter', sans-serif;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); }
+    .blog { max-width: 720px; margin: 0 auto; padding: 4rem 2rem; }
+    header { margin-bottom: 3rem; }
+    .category { font-family: var(--ui-font); font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--primary); margin-bottom: 0.75rem; }
+    h1 { font-size: 2.4rem; line-height: 1.25; font-weight: 700; margin-bottom: 1rem; }
+    .meta { font-family: var(--ui-font); color: var(--muted); font-size: 0.9rem; }
+    .summary-box { font-size: 1.15rem; line-height: 1.8; color: var(--muted); border-top: 2px solid var(--primary); border-bottom: 1px solid var(--border); padding: 1.5rem 0; margin: 2rem 0; font-style: italic; }
+    .topics { font-family: var(--ui-font); background: #f8faff; border-radius: 12px; padding: 1.25rem 1.5rem; margin: 2rem 0; }
+    .topics h2 { font-family: var(--ui-font); font-size: 0.85rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; color: var(--primary); margin-bottom: 0.75rem; }
+    .topics ul { list-style: disc; padding-left: 1.2rem; }
+    .topics li { padding: 0.2rem 0; font-size: 0.95rem; color: var(--text); }
+    .content p { margin-bottom: 1.5rem; line-height: 1.9; font-size: 1.05rem; }
+    @media (max-width: 600px) { h1 { font-size: 1.7rem; } .blog { padding: 2rem 1rem; } }
+  </style>
+</head>
+<body>
+  <article class="blog">
+    <header>
+      <p class="category">Article · PDF Studio</p>
+      <h1>{{TITLE}}</h1>
+      <p class="meta">Converted from PDF · PDF Studio</p>
+    </header>
+
+    <blockquote class="summary-box">{{EXECUTIVE_SUMMARY}}</blockquote>
+
+    <div class="topics">
+      <h2>Topics Covered</h2>
+      <ul>{{KEY_TOPICS}}</ul>
+    </div>
+
+    <div class="content">{{CONTENT}}</div>
+  </article>
+</body>
+</html>

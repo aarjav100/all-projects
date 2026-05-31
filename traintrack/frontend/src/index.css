@@ -1,0 +1,69 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+:root {
+  background-color: #030712;
+  color: #f8fafc;
+  font-family: 'Outfit', sans-serif;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: radial-gradient(circle at 50% 0%, #1e1b4b 0%, #030712 100%);
+}
+
+.glass {
+  background: rgba(17, 24, 39, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-alt {
+  background: rgba(31, 41, 55, 0.5);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-card {
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.neon-glow {
+  box-shadow: 0 0 15px rgba(124, 58, 237, 0.4);
+}
+
+.neon-border {
+  border-color: rgba(124, 58, 237, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #030712;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 20px;
+  border: 2px solid #030712;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Map specific styling */
+.leaflet-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  filter: grayscale(1) invert(0.9) hue-rotate(180deg) brightness(0.8);
+}
+
