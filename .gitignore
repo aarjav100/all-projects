@@ -214,7 +214,6 @@ dump.rdb
 
 
 # ─── Large / Binary Files ───────────────────────────────────
-*.zip
 *.tar
 *.tar.gz
 *.tgz
