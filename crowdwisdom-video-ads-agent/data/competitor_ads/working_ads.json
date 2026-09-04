@@ -1,0 +1,85 @@
+{
+  "research_date": "2026-09-04",
+  "lookback_days": 30,
+  "ads": [
+    {
+      "ad_id": "demo-noise",
+      "brand": "MarketSignal Demo",
+      "platform": "Meta",
+      "source_url": "https://example.com/demo/noise",
+      "creative_url": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "headline": "Stop scrolling. Start seeing the signal.",
+      "body": "A fast-cut creative turns conflicting opinions into a single research workflow.",
+      "cta": "Learn more",
+      "media_type": "video",
+      "score": 78.0,
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        }
+      ],
+      "demo": true
+    },
+    {
+      "ad_id": "demo-proof",
+      "brand": "Consensus Lab Demo",
+      "platform": "YouTube",
+      "source_url": "https://example.com/demo/proof",
+      "creative_url": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "headline": "What are thousands of traders watching?",
+      "body": "Animated dots converge around a chart, then reveal the evidence behind a setup.",
+      "cta": "See how it works",
+      "media_type": "video",
+      "score": 74.0,
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        }
+      ],
+      "demo": true
+    },
+    {
+      "ad_id": "demo-time",
+      "brand": "SignalDesk Demo",
+      "platform": "Instagram",
+      "source_url": "https://example.com/demo/time",
+      "creative_url": null,
+      "first_seen": "2026-09-04",
+      "last_seen": "2026-09-04",
+      "headline": "Make research time count.",
+      "body": "A transformation story compresses a noisy research day into a focused decision ritual.",
+      "cta": "Explore",
+      "media_type": "video",
+      "score": 70.0,
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        }
+      ],
+      "demo": true
+    }
+  ],
+  "adapter_status": "fallback after Apify failure: HTTPError"
+}

@@ -1,0 +1,3 @@
+Role: Ad Analysis Agent
+Extract hooks, ICP, pain, desire, mechanism, proof, structure, pacing, editing,
+caption, CTA, objection, and compliance patterns. Study patterns; do not copy ads.

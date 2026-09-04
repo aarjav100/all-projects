@@ -1,0 +1,127 @@
+{
+  "files_inspected": [
+    "data\\proprietary\\_NDX_2026-04-27.json",
+    "data\\proprietary\\SNOW_2026-04-27.json"
+  ],
+  "assets": [
+    {
+      "file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "type": "json",
+      "bytes": 2519
+    },
+    {
+      "file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "type": "json",
+      "bytes": 4061
+    }
+  ],
+  "statistics": [
+    {
+      "metric": "^NDX confidence level",
+      "value": "85",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: confidence level",
+      "interpretation": "Reported source confidence, not a return forecast.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "^NDX current price",
+      "value": "27303.669921875",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: current price",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "^NDX target 1",
+      "value": "27480",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: target 1",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "^NDX target 2",
+      "value": "27640",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: target 2",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "^NDX stop 1",
+      "value": "27120",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: stop 1",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "^NDX stop 2",
+      "value": "26950",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\_NDX_2026-04-27.json",
+      "location": "top-level JSON field: stop 2",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW confidence level",
+      "value": "46",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: confidence level",
+      "interpretation": "Reported source confidence, not a return forecast.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW current price",
+      "value": "140.32",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: current price",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW target 1",
+      "value": "144.80",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: target 1",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW target 2",
+      "value": "148.20",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: target 2",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW stop 1",
+      "value": "137.20",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: stop 1",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    },
+    {
+      "metric": "SNOW stop 2",
+      "value": "134.10",
+      "source_file": "F:\\projects\\crowdwisdom-video-ads-agent\\data\\proprietary\\SNOW_2026-04-27.json",
+      "location": "top-level JSON field: stop 2",
+      "interpretation": "A source-provided level for the dated analysis.",
+      "confidence": 0.98
+    }
+  ],
+  "patterns": [
+    "^NDX direction recorded as LONG.",
+    "^NDX source mix is explicitly weighted across youtube 25%, x 25%, reddit 25%, groq 25%.",
+    "SNOW direction recorded as LONG.",
+    "SNOW source mix is explicitly weighted across youtube 10%, x 30%, reddit 0%, groq 60%."
+  ],
+  "proof_points": [
+    "^NDX: Nasdaq-100 Supported by Megacap Strength Today (source file dated 2026-04-27).",
+    "SNOW: Snowflake (SNOW) Setting Up for a Short-Term Break Above $145 (source file dated 2026-04-27)."
+  ],
+  "limitations": []
+}

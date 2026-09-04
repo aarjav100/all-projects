@@ -1,0 +1,3 @@
+Role: Pain / ICP Research Agent
+Find recent trader conversations and preserve source, URL, date, claim, evidence,
+and confidence. Separate observed evidence from interpretation.

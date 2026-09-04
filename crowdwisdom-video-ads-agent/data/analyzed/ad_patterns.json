@@ -1,0 +1,158 @@
+{
+  "patterns": [
+    {
+      "ad_id": "demo-noise",
+      "visual_hook": "Immediate screen motion or a visual convergence moment.",
+      "opening_hook": "Stop scrolling. Start seeing the signal.",
+      "verbal_hook": "Stop scrolling. Start seeing the signal.",
+      "emotional_trigger": "Curiosity mixed with relief from noisy research.",
+      "pain_point": "Conflicting opinions and too many tabs to validate a trade.",
+      "desire": "A faster, more transparent way to see what informed traders are watching.",
+      "fear": "Missing context and reacting to the loudest opinion.",
+      "curiosity_gap": "What changes when scattered viewpoints are compared together?",
+      "icp": "Active self-directed stock, index, and crypto traders.",
+      "awareness_level": "problem aware",
+      "promise": "Turn market noise into a clearer research starting point.",
+      "mechanism": "Aggregate and compare trader viewpoints with explicit context.",
+      "proof": "Use dated, source-labeled examples instead of unsupported performance claims.",
+      "credibility": "Transparent source mix and a visible research workflow.",
+      "objection_handling": "A consensus signal is a research input, not a guarantee; manage risk independently.",
+      "cta": "Learn more",
+      "narrative_structure": "interrupt → amplify noise → reveal mechanism → clarify next step",
+      "visual_style": "high-contrast fintech UI, kinetic type, chart motion",
+      "pacing": "fast first beat, deliberate reveal, concise close",
+      "editing_style": "hard cuts, split screens, data particles, clean end card",
+      "captions": "Short captions with one idea per beat.",
+      "pattern_interrupts": [
+        "silence after notification barrage",
+        "all opinions collapse into one card"
+      ],
+      "social_proof": "Use aggregate viewpoints only when the source and date are visible.",
+      "urgency": "Timeliness comes from the dated research context, not fake countdowns.",
+      "offer_structure": "Show the workflow, then invite the viewer to explore CrowdWisdom.",
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        },
+        {
+          "claim": "Pattern extracted from the ad's creative framing; success is not asserted.",
+          "source": "https://example.com/demo/noise",
+          "url": "https://example.com/demo/noise",
+          "date": "2026-09-04",
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.45,
+          "location": null
+        }
+      ]
+    },
+    {
+      "ad_id": "demo-proof",
+      "visual_hook": "Immediate screen motion or a visual convergence moment.",
+      "opening_hook": "What are thousands of traders watching?",
+      "verbal_hook": "What are thousands of traders watching?",
+      "emotional_trigger": "Curiosity mixed with relief from noisy research.",
+      "pain_point": "Conflicting opinions and too many tabs to validate a trade.",
+      "desire": "A faster, more transparent way to see what informed traders are watching.",
+      "fear": "Missing context and reacting to the loudest opinion.",
+      "curiosity_gap": "What changes when scattered viewpoints are compared together?",
+      "icp": "Active self-directed stock, index, and crypto traders.",
+      "awareness_level": "problem aware",
+      "promise": "Turn market noise into a clearer research starting point.",
+      "mechanism": "Aggregate and compare trader viewpoints with explicit context.",
+      "proof": "Use dated, source-labeled examples instead of unsupported performance claims.",
+      "credibility": "Transparent source mix and a visible research workflow.",
+      "objection_handling": "A consensus signal is a research input, not a guarantee; manage risk independently.",
+      "cta": "See how it works",
+      "narrative_structure": "interrupt → amplify noise → reveal mechanism → clarify next step",
+      "visual_style": "high-contrast fintech UI, kinetic type, chart motion",
+      "pacing": "fast first beat, deliberate reveal, concise close",
+      "editing_style": "hard cuts, split screens, data particles, clean end card",
+      "captions": "Short captions with one idea per beat.",
+      "pattern_interrupts": [
+        "silence after notification barrage",
+        "all opinions collapse into one card"
+      ],
+      "social_proof": "Use aggregate viewpoints only when the source and date are visible.",
+      "urgency": "Timeliness comes from the dated research context, not fake countdowns.",
+      "offer_structure": "Show the workflow, then invite the viewer to explore CrowdWisdom.",
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        },
+        {
+          "claim": "Pattern extracted from the ad's creative framing; success is not asserted.",
+          "source": "https://example.com/demo/proof",
+          "url": "https://example.com/demo/proof",
+          "date": "2026-09-04",
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.45,
+          "location": null
+        }
+      ]
+    },
+    {
+      "ad_id": "demo-time",
+      "visual_hook": "Immediate screen motion or a visual convergence moment.",
+      "opening_hook": "Make research time count.",
+      "verbal_hook": "Make research time count.",
+      "emotional_trigger": "Curiosity mixed with relief from noisy research.",
+      "pain_point": "Conflicting opinions and too many tabs to validate a trade.",
+      "desire": "A faster, more transparent way to see what informed traders are watching.",
+      "fear": "Missing context and reacting to the loudest opinion.",
+      "curiosity_gap": "What changes when scattered viewpoints are compared together?",
+      "icp": "Active self-directed stock, index, and crypto traders.",
+      "awareness_level": "problem aware",
+      "promise": "Turn market noise into a clearer research starting point.",
+      "mechanism": "Aggregate and compare trader viewpoints with explicit context.",
+      "proof": "Use dated, source-labeled examples instead of unsupported performance claims.",
+      "credibility": "Transparent source mix and a visible research workflow.",
+      "objection_handling": "A consensus signal is a research input, not a guarantee; manage risk independently.",
+      "cta": "Explore",
+      "narrative_structure": "interrupt → amplify noise → reveal mechanism → clarify next step",
+      "visual_style": "high-contrast fintech UI, kinetic type, chart motion",
+      "pacing": "fast first beat, deliberate reveal, concise close",
+      "editing_style": "hard cuts, split screens, data particles, clean end card",
+      "captions": "Short captions with one idea per beat.",
+      "pattern_interrupts": [
+        "silence after notification barrage",
+        "all opinions collapse into one card"
+      ],
+      "social_proof": "Use aggregate viewpoints only when the source and date are visible.",
+      "urgency": "Timeliness comes from the dated research context, not fake countdowns.",
+      "offer_structure": "Show the workflow, then invite the viewer to explore CrowdWisdom.",
+      "evidence": [
+        {
+          "claim": "Demo creative pattern only; no performance success is asserted.",
+          "source": "curated_demo_dataset",
+          "url": null,
+          "date": null,
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.4,
+          "location": null
+        },
+        {
+          "claim": "Pattern extracted from the ad's creative framing; success is not asserted.",
+          "source": "https://example.com/demo/time",
+          "url": "https://example.com/demo/time",
+          "date": "2026-09-04",
+          "retrieved_at": "2026-09-04",
+          "confidence": 0.45,
+          "location": null
+        }
+      ]
+    }
+  ],
+  "summary": "Recurring creative pattern: use motion and contrast to turn information overload into a visible research mechanism."
+}

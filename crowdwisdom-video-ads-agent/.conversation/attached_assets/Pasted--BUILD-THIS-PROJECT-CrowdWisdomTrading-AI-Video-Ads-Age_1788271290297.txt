@@ -1,0 +1,1616 @@
+# BUILD THIS PROJECT: CrowdWisdomTrading AI Video Ads Agent
+
+You are an expert Python engineer, AI-agent architect, performance marketer, creative director, and video-generation engineer.
+
+Build a complete production-quality Python project for the **CrowdWisdomTrading Video Ads Agent internship assessment**.
+
+The goal is NOT to generate text advertisements.
+
+The goal is to build an autonomous **AI marketing-agent pipeline that researches winning ads, identifies marketing patterns, researches current trader pain points, creates high-quality video-ad storyboards, and renders actual 30–60 second video advertisements.**
+
+The final result must demonstrate both:
+
+1. Strong Python / AI-agent engineering
+2. Strong marketing creativity and video-ad thinking
+
+The generated ads should make the evaluator think:
+
+> "WOW — this is an actual creative advertising system, not just an LLM wrapper."
+
+---
+
+# 1. CORE PROJECT OBJECTIVE
+
+Build a multi-agent system for:
+
+https://www.crowdwisdomtrading.com/
+
+The system should automatically:
+
+1. Research successful competitor/trading ads
+2. Collect recent ads from the last 30 days
+3. Analyze their hooks, pain points, ICPs, concepts, structures and CTAs
+4. Research current trader pain points and market conversations
+5. Analyze CrowdWisdomTrading's unique/proprietary data
+6. Generate 3 distinct video-ad concepts
+7. Generate detailed video storyboards
+8. Generate voiceover/dialogue/captions/visual directions
+9. Generate the actual 30–60 second video
+10. Save all research, reasoning outputs, scripts and metadata as JSON
+11. Provide a simple interface to run the complete pipeline
+12. Produce a final MP4 that can be shown to the internship evaluator
+
+---
+
+# 2. REQUIRED TECHNOLOGY
+
+Use:
+
+* Python 3.11+
+* Hermes Agent framework
+* OpenRouter as the primary LLM provider
+* Apify for ad/data scraping
+* Tavily OR Exa for recent web research
+* OpenMontage as the preferred video rendering system
+* FFmpeg where required
+* Pydantic for structured outputs
+* JSON for persistent intermediate outputs
+
+Do NOT replace Hermes with LangChain, CrewAI, AutoGen, or another agent framework.
+
+Hermes must be a real part of the architecture.
+
+Use the Hermes Python-library integration where appropriate.
+
+Reference:
+
+https://github.com/NousResearch/hermes-agent
+
+OpenRouter:
+
+https://openrouter.ai/
+
+Video rendering preference:
+
+https://github.com/calesthio/OpenMontage
+
+Fallback video systems:
+
+https://github.com/heygen-com/hyperframes
+
+https://leronx.org/
+
+Also inspect these projects when useful:
+
+https://github.com/baldiga/headless-studio
+
+https://github.com/OpenCut-app/OpenCut
+
+---
+
+# 3. IMPORTANT SECURITY RULE
+
+NEVER hard-code API keys.
+
+Create:
+
+.env.example
+
+with:
+
+OPENROUTER_API_KEY=
+APIFY_API_TOKEN=
+TAVILY_API_KEY=
+EXA_API_KEY=
+
+The application should load environment variables with python-dotenv.
+
+Never print secret keys.
+
+Never commit .env.
+
+Create .gitignore containing:
+
+.env
+**pycache**/
+*.pyc
+outputs/
+temp/
+.cache/
+node_modules/
+
+---
+
+# 4. PROJECT ARCHITECTURE
+
+Create this architecture:
+
+User
+↓
+Orchestrator
+↓
+Research Manager Agent
+↓
+├── Competitor Ad Research Agent
+├── Ad Analysis Agent
+├── Pain / ICP Research Agent
+└── Proprietary Data Analysis Agent
+↓
+Creative Strategy Agent
+↓
+├── Ad Concept A
+├── Ad Concept B
+└── Ad Concept C
+↓
+Script / Storyboard Agent
+↓
+Video Director Agent
+↓
+Asset Generation / Collection
+↓
+OpenMontage Video Renderer
+↓
+Quality Control Agent
+↓
+Final MP4
+↓
+JSON + report
+
+Every major agent should have a clearly defined responsibility.
+
+---
+
+# 5. DIRECTORY STRUCTURE
+
+Create:
+
+crowdwisdom-video-ads-agent/
+
+├── README.md
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── pyproject.toml
+│
+├── app/
+│   ├── **init**.py
+│   ├── main.py
+│   ├── config.py
+│   │
+│   ├── orchestrator/
+│   │   ├── **init**.py
+│   │   └── pipeline.py
+│   │
+│   ├── agents/
+│   │   ├── **init**.py
+│   │   ├── base_agent.py
+│   │   ├── ads_manager_agent.py
+│   │   ├── competitor_research_agent.py
+│   │   ├── ad_analysis_agent.py
+│   │   ├── pain_research_agent.py
+│   │   ├── proprietary_data_agent.py
+│   │   ├── creative_strategy_agent.py
+│   │   ├── script_agent.py
+│   │   ├── storyboard_agent.py
+│   │   ├── video_agent.py
+│   │   └── quality_control_agent.py
+│   │
+│   ├── tools/
+│   │   ├── **init**.py
+│   │   ├── openrouter_client.py
+│   │   ├── apify_client.py
+│   │   ├── tavily_client.py
+│   │   ├── exa_client.py
+│   │   ├── web_research.py
+│   │   ├── data_loader.py
+│   │   ├── json_store.py
+│   │   ├── asset_manager.py
+│   │   └── video_renderer.py
+│   │
+│   ├── models/
+│   │   ├── ad_models.py
+│   │   ├── research_models.py
+│   │   ├── script_models.py
+│   │   └── video_models.py
+│   │
+│   └── prompts/
+│       ├── ads_manager.txt
+│       ├── ad_analysis.txt
+│       ├── pain_research.txt
+│       ├── proprietary_data.txt
+│       ├── creative_strategy.txt
+│       ├── script.txt
+│       ├── storyboard.txt
+│       ├── video.txt
+│       └── quality_control.txt
+│
+├── data/
+│   ├── raw/
+│   ├── competitor_ads/
+│   ├── proprietary/
+│   ├── research/
+│   ├── analyzed/
+│   └── generated/
+│
+├── outputs/
+│   ├── research/
+│   ├── scripts/
+│   ├── storyboards/
+│   ├── videos/
+│   ├── reports/
+│   └── assets/
+│
+├── scripts/
+│   ├── setup.sh
+│   ├── run_pipeline.py
+│   └── render_video.py
+│
+└── tests/
+├── test_models.py
+├── test_agents.py
+├── test_research.py
+└── test_pipeline.py
+
+---
+
+# 6. CROWDWISDOM BRAND UNDERSTANDING
+
+Before generating ads, research:
+
+https://www.crowdwisdomtrading.com/
+
+Understand:
+
+* What CrowdWisdom Trading does
+* Who it serves
+* Its major products
+* Free vs Pro offering
+* Core differentiators
+* Trading markets covered
+* Track record
+* Trader pain points
+* Competitive positioning
+* Why it is different from generic AI/chatbots
+* Why it is different from TradingView
+* Why it is different from Seeking Alpha
+* Why it is different from TipRanks
+* Why it is different from individual trading gurus
+* Why collective intelligence matters
+
+Do not invent claims.
+
+If a performance statistic is used, preserve its source and context.
+
+Every factual marketing claim should have a source.
+
+---
+
+# 7. AGENT 1 — ADS MANAGER AGENT
+
+Create an Ads Manager Agent.
+
+Responsibilities:
+
+1. Identify the relevant advertising niche:
+
+   * trading
+   * stock trading
+   * crypto trading
+   * forex
+   * market intelligence
+   * trading signals
+   * investing education
+   * financial research
+   * AI trading tools
+
+2. Use Apify to collect publicly accessible advertising/creative data.
+
+3. Focus on ads from the most recent 30 days.
+
+4. Prefer ads that appear to be:
+
+   * actively running
+   * repeatedly used
+   * highly engaging
+   * relevant to the trading ICP
+
+5. Store raw results.
+
+6. Normalize the results into structured JSON.
+
+Do NOT claim that an ad is "successful" merely because it exists.
+
+Create a scoring system.
+
+Example:
+
+ad_score =
+relevance_score
++ longevity_score
++ creative_quality_score
++ engagement_score
++ repeated_usage_score
+
+Make the scoring transparent.
+
+Output:
+
+data/competitor_ads/working_ads.json
+
+Example schema:
+
+{
+"research_date": "...",
+"lookback_days": 30,
+"ads": [
+{
+"ad_id": "...",
+"brand": "...",
+"platform": "...",
+"source_url": "...",
+"creative_url": "...",
+"first_seen": "...",
+"last_seen": "...",
+"headline": "...",
+"body": "...",
+"cta": "...",
+"media_type": "video",
+"score": 0,
+"evidence": []
+}
+]
+}
+
+If Apify configuration/API access is unavailable, implement a clean adapter and mock/demo dataset so the entire pipeline still runs.
+
+---
+
+# 8. AGENT 2 — AD ANALYSIS AGENT
+
+Analyze each selected ad.
+
+Extract:
+
+* visual hook
+* opening 1–3 second hook
+* verbal hook
+* emotional trigger
+* pain point
+* desire
+* fear
+* curiosity gap
+* ICP
+* awareness level
+* promise
+* mechanism
+* proof
+* credibility
+* objection handling
+* CTA
+* narrative structure
+* visual style
+* pacing
+* editing style
+* captions
+* pattern interrupts
+* social proof
+* urgency
+* offer structure
+
+Do NOT copy competitor ads.
+
+We are studying patterns, not plagiarizing creatives.
+
+Output:
+
+data/analyzed/ad_patterns.json
+
+Also generate:
+
+outputs/reports/competitor_analysis.md
+
+---
+
+# 9. AGENT 3 — PAIN / ICP RESEARCH AGENT
+
+Use Tavily or Exa.
+
+Only search information from approximately the last 30 days whenever possible.
+
+Research:
+
+* current trader frustrations
+* information overload
+* conflicting market signals
+* trader uncertainty
+* lack of time
+* emotional trading
+* FOMO
+* conflicting analyst opinions
+* signal overload
+* difficulty validating trades
+* research fatigue
+* difficulty identifying consensus
+* current market conversations
+* questions traders are asking
+* current objections to trading signal services
+
+Search:
+
+Reddit
+YouTube
+X
+trading communities
+financial news
+forums
+blogs
+search results
+
+Do not blindly trust sources.
+
+Extract:
+
+{
+"pain_point": "...",
+"evidence": "...",
+"source": "...",
+"date": "...",
+"confidence": 0.0
+}
+
+Save:
+
+data/research/trader_pain_points.json
+
+---
+
+# 10. AGENT 4 — PROPRIETARY DATA AGENT
+
+The assessment provides CrowdWisdom proprietary data through Google Drive examples.
+
+The application must support loading these files from:
+
+data/proprietary/
+
+Do not hard-code their contents.
+
+Support:
+
+* CSV
+* JSON
+* XLSX
+* PDF
+* TXT
+
+The agent should inspect the files and identify:
+
+* useful statistics
+* historical performance
+* trader consensus
+* prediction patterns
+* asset categories
+* directional patterns
+* timestamps
+* success metrics
+* potential proof points
+* interesting visualizations
+
+IMPORTANT:
+
+Do not fabricate numbers.
+
+Every extracted statistic must maintain:
+
+* value
+* source file
+* row/page/location when possible
+* interpretation
+* confidence
+
+Output:
+
+data/analyzed/proprietary_insights.json
+
+---
+
+# 11. AGENT 5 — CREATIVE STRATEGY AGENT
+
+This is one of the most important agents.
+
+Combine:
+
+1. Competitor winning patterns
+2. Current trader pain
+3. ICP
+4. CrowdWisdom unique data
+5. CrowdWisdom positioning
+
+Create EXACTLY 3 different ad concepts.
+
+They must be substantially different.
+
+Concept 1:
+
+PAIN / PROBLEM INTERRUPT
+
+Example direction:
+
+Start with a trader experiencing information overload.
+
+Rapid cuts of:
+
+TradingView
+YouTube
+X
+Reddit
+news
+multiple charts
+contradictory opinions
+
+Then suddenly everything stops.
+
+Message:
+
+"What if you didn't need another opinion?"
+
+Then introduce CrowdWisdom collective intelligence.
+
+Concept 2:
+
+DATA / PROOF
+
+Open with a visually striking data visualization.
+
+Show thousands of traders converging.
+
+Then transform the data into a simple actionable setup.
+
+Focus on proof, transparency and collective intelligence.
+
+Concept 3:
+
+TIME / TRANSFORMATION
+
+Start with:
+
+"How much of your week disappears researching trades?"
+
+Show chaotic research.
+
+Compress 100+ hours of research into a few minutes.
+
+Then reveal CrowdWisdom.
+
+These are examples only.
+
+The agent should create original concepts based on actual research.
+
+Each concept must have:
+
+* title
+* ICP
+* awareness level
+* central idea
+* visual hook
+* verbal hook
+* emotional trigger
+* pain
+* promise
+* mechanism
+* proof
+* CTA
+* disclaimer requirements
+* visual style
+* pacing
+* music direction
+* estimated duration
+
+Save:
+
+outputs/scripts/concepts.json
+
+---
+
+# 12. AGENT 6 — SCRIPT AGENT
+
+For each of the 3 concepts, generate a complete 30–60 second VIDEO AD SCRIPT.
+
+This is NOT a text ad.
+
+The script must be designed for actual video production.
+
+Each scene must include:
+
+* timestamp
+* duration
+* visual
+* camera direction
+* animation
+* on-screen text
+* voiceover
+* sound effect
+* music direction
+* transition
+* asset requirement
+* source/evidence if a claim is used
+
+Example:
+
+{
+"scene": 1,
+"start": 0,
+"end": 3,
+"visual": "Fast montage of 6 trading screens...",
+"camera": "rapid punch-in cuts",
+"voiceover": "You're not short on information.",
+"onscreen_text": "You're drowning in it.",
+"sfx": "notification barrage",
+"music": "high tension",
+"transition": "hard cut"
+}
+
+The first 3 seconds must contain a strong visual hook.
+
+The first 5 seconds must establish curiosity.
+
+Avoid generic introductions.
+
+Avoid:
+
+"Are you tired of losing money?"
+
+Avoid generic AI language.
+
+Avoid fake urgency.
+
+Avoid guaranteed-profit claims.
+
+Avoid "get rich quick".
+
+---
+
+# 13. SCRIPT TYPES
+
+Create three videos:
+
+VIDEO A:
+Competitor-inspired pain/hook structure + CrowdWisdom differentiation.
+
+VIDEO B:
+Current ICP pain research + proprietary CrowdWisdom data.
+
+VIDEO C:
+Pure CrowdWisdom transformation story:
+problem → chaos → collective intelligence → actionable clarity → CTA.
+
+Each should feel like a different creative campaign.
+
+---
+
+# 14. STORYBOARD OUTPUT
+
+Save each storyboard as human-readable JSON.
+
+Example:
+
+outputs/storyboards/ad_01.json
+
+Structure:
+
+{
+"campaign": "...",
+"duration_seconds": 45,
+"aspect_ratio": "9:16",
+"platform": "TikTok/Reels/Shorts",
+"concept": "...",
+"scenes": [
+{
+"scene_id": 1,
+"duration": 3,
+"visual_description": "...",
+"voiceover": "...",
+"onscreen_text": "...",
+"asset_type": "...",
+"camera": "...",
+"transition": "...",
+"audio": "..."
+}
+],
+"cta": "...",
+"disclaimer": "..."
+}
+
+Also save a readable markdown version.
+
+---
+
+# 15. VISUAL HOOK REQUIREMENT
+
+The visual hook is extremely important.
+
+Do NOT create a boring:
+
+"Person sitting at laptop talking to camera."
+
+The system should prioritize visual storytelling.
+
+Potential creative mechanisms:
+
+* screen overload
+* rapidly multiplying charts
+* split-screen conflicting trader opinions
+* giant wall of notifications
+* countdown-style information overload
+* visual collapse of dozens of opinions into one signal
+* thousands of trader dots converging into one direction
+* data particles forming a market trend
+* chaotic charts becoming one clean decision card
+* "100 hours → 5 minutes" transformation
+* analyst opinions colliding
+* market noise being filtered out visually
+
+Use creative judgment.
+
+---
+
+# 16. VIDEO AGENT
+
+Build a Video Agent that converts the storyboard into an actual video.
+
+Preferred renderer:
+
+OpenMontage
+
+https://github.com/calesthio/OpenMontage
+
+The agent should:
+
+1. Read storyboard JSON
+2. Determine required assets
+3. Download/use legal stock assets where possible
+4. Generate motion graphics
+5. Create charts from proprietary data where appropriate
+6. Generate voiceover if the chosen provider supports it
+7. Add subtitles
+8. Add sound effects
+9. Add music
+10. Compose scenes
+11. Render final MP4
+
+Use FFmpeg where necessary.
+
+Output:
+
+outputs/videos/ad_01.mp4
+outputs/videos/ad_02.mp4
+outputs/videos/ad_03.mp4
+
+If a full video-generation API is unavailable, create the video using:
+
+* generated motion graphics
+* text animation
+* charts
+* stock footage
+* screenshots/mock UI
+* voiceover
+* transitions
+* sound effects
+* FFmpeg/OpenMontage
+
+The result must still be an actual MP4.
+
+---
+
+# 17. VIDEO FORMAT
+
+Primary:
+
+9:16 vertical
+
+Resolution:
+
+1080x1920 if system resources allow.
+
+Fallback:
+
+720x1280.
+
+Duration:
+
+30–60 seconds.
+
+Optimize for:
+
+TikTok
+Instagram Reels
+YouTube Shorts
+
+---
+
+# 18. VIDEO STYLE
+
+The generated ads should feel like modern performance marketing.
+
+Prioritize:
+
+* immediate visual movement
+* strong contrast
+* rapid pacing
+* pattern interrupts
+* cinematic transitions
+* UI animation
+* charts
+* data visualization
+* kinetic typography
+* realistic trading environments
+* clean premium fintech aesthetic
+
+Avoid:
+
+* corporate PowerPoint look
+* static slides
+* excessive text
+* generic stock footage
+* boring talking-head format
+* long explanations
+* huge paragraphs on screen
+
+---
+
+# 19. QUALITY CONTROL AGENT
+
+Create a final Quality Control Agent.
+
+It should evaluate every generated ad against:
+
+HOOK:
+
+* Does the first 3 seconds stop attention?
+
+CLARITY:
+
+* Is the product understood?
+
+ICP:
+
+* Is this clearly for active traders?
+
+DIFFERENTIATION:
+
+* Is CrowdWisdom meaningfully differentiated?
+
+PROOF:
+
+* Are factual claims supported?
+
+CREATIVITY:
+
+* Is the concept original?
+
+VISUAL:
+
+* Is there enough movement?
+
+PACING:
+
+* Does the video maintain attention?
+
+CTA:
+
+* Is the next action clear?
+
+COMPLIANCE:
+
+* No guaranteed returns
+* No misleading financial promises
+* No fabricated performance
+* No false testimonials
+* No deceptive claims
+
+SCORING:
+
+hook_score / 10
+clarity_score / 10
+creative_score / 10
+visual_score / 10
+brand_fit_score / 10
+proof_score / 10
+compliance_score / 10
+overall_score / 10
+
+If overall score < 8:
+
+automatically send the storyboard back to the Creative Strategy / Script Agent for revision.
+
+Maximum revision cycles:
+
+3.
+
+---
+
+# 20. HUMAN-READABLE FINAL REPORT
+
+Generate:
+
+outputs/reports/final_report.md
+
+Include:
+
+# CrowdWisdom Video Ads Agent
+
+## Research Summary
+
+## Competitor Ads
+
+## Winning Creative Patterns
+
+## Trader Pain Points
+
+## ICP
+
+## CrowdWisdom Differentiators
+
+## Proprietary Data Insights
+
+## Generated Concepts
+
+### Concept 1
+
+### Concept 2
+
+### Concept 3
+
+## Quality Scores
+
+## Generated Videos
+
+## Architecture
+
+## How the Agents Work
+
+## API Dependencies
+
+## Setup Instructions
+
+## Limitations
+
+## Future Improvements
+
+---
+
+# 21. COMMAND LINE INTERFACE
+
+Implement:
+
+python -m app.main
+
+It should provide:
+
+1. Full pipeline
+2. Research only
+3. Generate concepts only
+4. Generate scripts only
+5. Render videos only
+6. Quality check only
+
+Example:
+
+python -m app.main --mode full
+
+python -m app.main --mode research
+
+python -m app.main --mode concepts
+
+python -m app.main --mode scripts
+
+python -m app.main --mode video
+
+python -m app.main --mode qa
+
+---
+
+# 22. OPTIONAL SIMPLE WEB UI
+
+If time permits, create a minimal Streamlit interface.
+
+The UI should show:
+
+CrowdWisdom Video Ads Agent
+
+[Run Research]
+
+[Generate Concepts]
+
+[Generate Scripts]
+
+[Render Videos]
+
+[Run QA]
+
+Then display:
+
+Research results
+↓
+3 concepts
+↓
+3 storyboards
+↓
+3 videos
+↓
+QA scores
+
+The UI is optional.
+
+The backend pipeline is mandatory.
+
+---
+
+# 23. CACHING
+
+Do not repeatedly spend API credits.
+
+Cache:
+
+* Apify results
+* Tavily results
+* Exa results
+* LLM responses where practical
+* generated assets
+
+Use:
+
+data/cache/
+
+Allow:
+
+--force-refresh
+
+to bypass cache.
+
+---
+
+# 24. ERROR HANDLING
+
+The system must gracefully handle:
+
+* missing API keys
+* Apify failures
+* Tavily failures
+* Exa failures
+* OpenRouter failures
+* rate limits
+* invalid JSON
+* malformed LLM output
+* missing assets
+* FFmpeg errors
+* OpenMontage errors
+
+Use structured logging.
+
+Do not crash the entire pipeline because one research source failed.
+
+---
+
+# 25. STRUCTURED LLM OUTPUT
+
+Do NOT rely on raw LLM text whenever structured output is expected.
+
+Use Pydantic models.
+
+For example:
+
+AdAnalysis
+ResearchFinding
+PainPoint
+CreativeConcept
+Scene
+Storyboard
+VideoMetadata
+QualityReport
+
+Validate every generated JSON object.
+
+If parsing fails:
+
+1. attempt JSON extraction
+2. retry with a repair prompt
+3. validate again
+4. save error information
+
+---
+
+# 26. HERMES AGENT DESIGN
+
+Hermes must act as the agent orchestration layer.
+
+Create a reusable base agent abstraction.
+
+Each agent should have:
+
+* role
+* system prompt
+* tools
+* input schema
+* output schema
+* execution method
+* logging
+* retry handling
+
+Agents:
+
+AdsManagerAgent
+CompetitorResearchAgent
+AdAnalysisAgent
+PainResearchAgent
+ProprietaryDataAgent
+CreativeStrategyAgent
+ScriptAgent
+StoryboardAgent
+VideoAgent
+QualityControlAgent
+
+The orchestrator should control the sequence.
+
+Do not create one giant LLM prompt that performs everything.
+
+The evaluator should clearly see the multi-agent architecture.
+
+---
+
+# 27. AGENT COMMUNICATION
+
+Pass structured JSON between agents.
+
+Example:
+
+CompetitorResearchAgent
+→ working_ads.json
+
+AdAnalysisAgent
+→ ad_patterns.json
+
+PainResearchAgent
+→ trader_pain_points.json
+
+ProprietaryDataAgent
+→ proprietary_insights.json
+
+CreativeStrategyAgent
+→ concepts.json
+
+ScriptAgent
+→ scripts/*.json
+
+StoryboardAgent
+→ storyboards/*.json
+
+VideoAgent
+→ videos/*.mp4
+
+QualityControlAgent
+→ qa/*.json
+
+This makes the system inspectable and demonstrates engineering quality.
+
+---
+
+# 28. DATA PROVENANCE
+
+Every important research claim should preserve:
+
+source
+url
+date
+retrieved_at
+claim
+confidence
+
+Example:
+
+{
+"claim": "Traders experience information overload",
+"source": "https://...",
+"date": "...",
+"retrieved_at": "...",
+"confidence": 0.91
+}
+
+Do not generate unsupported statistics.
+
+---
+
+# 29. FINANCIAL CONTENT SAFETY
+
+This is a trading-related advertising system.
+
+Never generate:
+
+"Guaranteed profits"
+
+"100% accurate"
+
+"Never lose again"
+
+"Guaranteed returns"
+
+"Get rich quickly"
+
+"Risk-free trading"
+
+or fabricated testimonials.
+
+If performance statistics are used, preserve the appropriate context and disclaimer.
+
+Include a concise financial disclaimer where appropriate.
+
+---
+
+# 30. CREATIVE INTELLIGENCE
+
+Do not merely ask the LLM:
+
+"Create a trading ad."
+
+Instead make the creative system reason from:
+
+winning advertising patterns
++
+current trader pain
++
+ICP
++
+CrowdWisdom differentiation
++
+proprietary evidence
++
+visual storytelling
+
+The objective is:
+
+RESEARCH → INSIGHT → STRATEGY → CREATIVE → SCRIPT → VIDEO → QA
+
+---
+
+# 31. DEMO MODE
+
+Because API credentials may not initially be available, implement:
+
+python -m app.main --mode demo
+
+Demo mode should use:
+
+* sample competitor-ad JSON
+* sample research data
+* sample proprietary data
+
+and still demonstrate:
+
+agents
+→ concepts
+→ storyboard
+→ video rendering
+→ QA
+
+Do NOT fake API results when real APIs are configured.
+
+Clearly label demo data as DEMO.
+
+---
+
+# 32. README
+
+Write an excellent README.
+
+Include:
+
+Project overview
+Architecture diagram
+Agent descriptions
+Installation
+Environment variables
+Hermes setup
+OpenRouter setup
+Apify setup
+Tavily setup
+Exa setup
+OpenMontage setup
+FFmpeg installation
+Running the project
+Demo mode
+Expected outputs
+Troubleshooting
+Limitations
+Future improvements
+
+Include architecture:
+
+```
+              ┌───────────────────┐
+              │   User / CLI      │
+              └─────────┬─────────┘
+                        ↓
+              ┌───────────────────┐
+              │   Orchestrator    │
+              └─────────┬─────────┘
+                        ↓
+      ┌─────────────────┼─────────────────┐
+      ↓                 ↓                 ↓
+ Ads Research       Pain Research    Data Analysis
+      ↓                 ↓                 ↓
+      └─────────────────┼─────────────────┘
+                        ↓
+              Creative Strategy
+                        ↓
+              3 Ad Concepts
+                        ↓
+              Script / Storyboard
+                        ↓
+                Video Agent
+                        ↓
+                   OpenMontage
+                        ↓
+                   Final MP4
+                        ↓
+                    QA Agent
+```
+
+---
+
+# 33. REPLIT REQUIREMENTS
+
+Make this project work cleanly inside Replit.
+
+Create:
+
+.replit
+
+and configure the appropriate Python run command.
+
+The main command should be:
+
+python -m app.main --mode demo
+
+for the initial Replit demo.
+
+Make sure all dependencies can be installed from:
+
+requirements.txt
+
+If OpenMontage requires a separate setup, document it clearly and create a wrapper around it.
+
+If some system dependency cannot be installed automatically in Replit, create a graceful fallback renderer using FFmpeg/moviepy/Pillow/OpenCV where appropriate.
+
+The project must not depend on my local machine.
+
+---
+
+# 34. TESTING
+
+Create tests for:
+
+* configuration
+* Pydantic models
+* JSON validation
+* agent initialization
+* research adapters
+* caching
+* storyboard generation
+* pipeline orchestration
+
+At minimum:
+
+pytest
+
+should execute without syntax errors.
+
+---
+
+# 35. IMPLEMENTATION ORDER
+
+Do NOT try to build everything simultaneously.
+
+Implement in this exact order:
+
+PHASE 1
+Project structure + configuration.
+
+PHASE 2
+Hermes + OpenRouter integration.
+
+PHASE 3
+Pydantic schemas.
+
+PHASE 4
+Research adapters:
+Apify
+Tavily
+Exa
+
+PHASE 5
+Ads Manager Agent.
+
+PHASE 6
+Ad Analysis Agent.
+
+PHASE 7
+Pain/ICP Research Agent.
+
+PHASE 8
+Proprietary Data Agent.
+
+PHASE 9
+Creative Strategy Agent.
+
+PHASE 10
+Script + Storyboard Agent.
+
+PHASE 11
+Video Agent.
+
+PHASE 12
+OpenMontage/FFmpeg rendering.
+
+PHASE 13
+Quality Control Agent.
+
+PHASE 14
+Full pipeline.
+
+PHASE 15
+Demo mode.
+
+PHASE 16
+README + tests + final cleanup.
+
+After each phase:
+
+* run tests
+* fix errors
+* inspect generated JSON
+* continue only after the current phase works
+
+---
+
+# 36. IMPORTANT: DO REAL IMPLEMENTATION
+
+Do not give me pseudo-code.
+
+Do not leave:
+
+TODO
+
+"implement later"
+
+"placeholder"
+
+"your code here"
+
+for core functionality.
+
+Implement working code.
+
+Where external credentials are unavailable, implement adapters + mock/demo fallback.
+
+---
+
+# 37. FINAL DEMO
+
+At the end, running:
+
+python -m app.main --mode demo
+
+must demonstrate the entire flow:
+
+Research
+↓
+Competitor analysis
+↓
+Pain research
+↓
+Proprietary data analysis
+↓
+Creative concepts
+↓
+3 storyboards
+↓
+3 video ads
+↓
+Quality scoring
+↓
+Final report
+
+The final output directory should contain:
+
+outputs/
+├── research/
+├── scripts/
+├── storyboards/
+├── videos/
+│   ├── ad_01.mp4
+│   ├── ad_02.mp4
+│   └── ad_03.mp4
+├── reports/
+│   └── final_report.md
+└── qa/
+
+---
+
+# 38. FINAL QUALITY BAR
+
+Before declaring the project complete, inspect the final videos and ask:
+
+"Would this look like an actual paid social advertisement?"
+
+If the answer is no, improve the creative.
+
+The assessment explicitly says:
+
+"an ad that will cause you to WOW!!"
+
+Therefore, prioritize:
+
+CREATIVE QUALITY > GENERIC LLM OUTPUT
+
+The evaluator should see:
+
+* real agent architecture
+* real research
+* real data
+* structured outputs
+* original creative concepts
+* strong hooks
+* actual video generation
+* quality control
+* clean Python architecture
+* reproducibility
+* thoughtful marketing strategy
+
+Do not optimize for the largest amount of code.
+
+Optimize for a small, polished, demonstrable system.
+
+---
+
+# 39. START NOW
+
+First inspect the available environment.
+
+Then create the project structure.
+
+Then install dependencies.
+
+Then implement Phase 1.
+
+Do not ask me to manually create files that you can create yourself.
+
+If a dependency/API cannot be used in Replit, determine the best compatible fallback and document it.
+
+After implementation, run the demo and tests.
+
+Fix errors automatically.
+
+Continue iterating until:
+
+python -m app.main --mode demo
+
+works successfully and produces:
+
+1. structured research JSON
+2. 3 creative concepts
+3. 3 storyboards
+4. 3 video MP4 files or the strongest available rendered fallback
+5. QA reports
+6. final_report.md
+
+At the end, show me:
+
+* final architecture
+* files created
+* commands to run
+* API keys required
+* generated video locations
+* QA scores
+* known limitations
+* recommended next improvements
+
+Do not stop after creating the architecture. Build the working project.

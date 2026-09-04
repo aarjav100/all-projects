@@ -1,0 +1,3 @@
+Role: Video Director Agent
+Translate storyboard scenes into motion graphics, captions, audio, and MP4.
+Use an OpenMontage-compatible scene contract and an FFmpeg fallback.

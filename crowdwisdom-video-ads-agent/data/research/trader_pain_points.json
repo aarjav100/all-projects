@@ -1,0 +1,127 @@
+{
+  "research_date": "2026-09-04",
+  "lookback_days": 30,
+  "findings": [
+    {
+      "pain_point": "AI is Everywhere in Finance, but the Trading Desk is Where it Still Falls Short, Says Quantum Signals' Yianni Gamvros - The Fintech Times",
+      "evidence": "It can detect key market dynamics such as price movement, liquidity and volatility. It can find patterns around these and predict them with some confidence. Converting those into trading strategies takes more work: how much to trade, and when to time the entries and exits. Sophisticated traders will also be able to ask the AI to test and research more complex patterns across contracts, sectors and market dynamics.\n\nAI can also uncover patterns in the data without connecting them to their underlying causes. Sophisticated quants know the causes and can look for different patterns driven by real-world events. It is unclear when, or whether, AI will close that gap.\n\n##### What is the industry mo",
+      "source": "Tavily/Exa",
+      "url": "https://thefintechtimes.com/ai-is-everywhere-in-finance-but-the-trading-desk-is-where-it-still-falls-short-says-quantum-signals-yianni-gamvros/",
+      "date": "Wed, 12 Aug 2026 18:00:44 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Why AI’s real superpower isn’t predicting markets - Forbes Australia",
+      "evidence": "Technology can analyse vast amounts of information in seconds, but it cannot replicate the judgement, experience, or context that underpin sound investment decisions. AI can process data at scale, but it is human insight that gives information meaning.\n\nThis is where the next generation of investment platforms is evolving. AI is no longer about predicting the future; it is about helping investors understand the present. Solutions such as CMC Intelligence reflect this shift by synthesising market information into personalised insights, allowing investors to spend less time researching and more time making considered investment decisions. [...] Skip to content\n\n# Why AI’s real superpower isn’t",
+      "source": "Tavily/Exa",
+      "url": "https://www.forbes.com.au/brand-voice/brandvoice/why-ais-real-value-in-investing-isnt-prediction/",
+      "date": "Wed, 02 Sep 2026 03:51:29 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "'Don't assume that we're back to risk on': A research firm says one signal hints the bull market is on its last legs - Business Insider",
+      "evidence": "'Culling of the herd': Consulting could be headed for a decadelong shift that'll make it harder to climb its career ladder\n Companies are cracking down on your AI job search\n Inside the private clubs for Gen Z and millennial traders serious about making money in markets\n Retreats, coaching, and therapy: Inside the $1 billion cottage industry cashing in on the retail-trading phenomenon\n Day traders who quit their careers and gave up school tell us their biggest regrets\n The lab-grown diamond boom is over\n\n Stock Market\n Bear Market\n S&P 500\n More\n\nHOME   Subscribe\n\nThis story is available exclusively to Business Insider subscribers. Become an Insider and start reading now. Have an account? .\n",
+      "source": "Tavily/Exa",
+      "url": "https://www.businessinsider.com/stock-market-technical-analysis-sp500-bear-market-signal-2026-8",
+      "date": "Tue, 11 Aug 2026 14:48:11 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Crypto pullback reprices risk as CPI and Strait headlines converge - KITCO",
+      "evidence": "ETH closed nearly -2% and confirmed a drop below short-term support, the reaction the source had been waiting for. That support loss is already confirmed. A different confirmation remains conditional: if ETH returns to the lost level, tests it and is rejected, the line should be confirmed as resistance. RSI and OBV remain bearish without major changes. ETH/BTC also printed its second close inside the Cloud in about a week, supporting an expected deeper Cloud close by next week, while bearish divergence clusters on ETH.D and ETH/BTC underpin the source's thesis that ETH should drop much harder with time.\n\n## Dominance is mixed, but broad ALT structure has not turned healthy [...] after its sh",
+      "source": "Tavily/Exa",
+      "url": "https://www.kitco.com/opinion/2026-08-11/crypto-pullback-reprices-risk-cpi-and-strait-headlines-converge",
+      "date": "Tue, 11 Aug 2026 15:03:44 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Wake Me Up When September Ends: The Bond Trap (SPX) - Seeking Alpha",
+      "evidence": "This article was written by\n\nAgar Capital\n\n5.5K Followers\n\nI’m a Portfolio manager (flexible equity funds and private clients), fundamental equity research, macro and geopolitical strategy.Over 10 years across global markets, managing multi-asset strategies and equity portfolios at a European asset manager.I combine top-down macro, bottom-up stock selection and real-time positioning (Bloomberg, models, data).I focus on earnings, tech disruption, policy shifts and capital flows — to identify mispriced opportunities before the market.On Seeking Alpha I share high-conviction ideas, contrarian views and deep breakdowns of both growth and value names.For more insights: follow me on X @AgarCapital",
+      "source": "Tavily/Exa",
+      "url": "https://seekingalpha.com/article/4942190-wake-me-up-when-september-ends-the-bond-trap",
+      "date": "Tue, 01 Sep 2026 18:12:59 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Six investors reveal the biggest market risks — and one strategy they agree on - CNBC",
+      "evidence": "Kumar noted that energy stocks have been the best and worst performers twice this year, as have IT stocks.\n\n\"Everything has worked at some points, nothing has worked at all points,\" he said. \"Diversification has helped hugely — across sectors and regions. And if, like us, you're prepared not to go all in on winners (and risk being a loser), it's been a pretty good year.\"\n\n\"You don't need to be a hero in this market — just let it work for you, and keep your exposures broad,\" he added. \"Don't die trying to be a hero.\"\n\n## Complacency warning [...] WATCH LIVE\n\nKey Points\n\n Global markets have been volatile this year, with a fresh bout of turbulence hitting equity and bond markets this week.\n In",
+      "source": "Tavily/Exa",
+      "url": "https://www.cnbc.com/2026/08/22/investors-market-risks-diversification-stocks-kospi.html",
+      "date": "Sat, 22 Aug 2026 05:00:01 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Investors should diversify beyond AI trade, says CIO - reuters.com",
+      "evidence": "### Image 6: Market Talk: Can economic pressure reopen the Strait? 05:18 Market Talk: Can economic pressure reopen the Strait?\n\n   ### Image 7: Silver Lake in talks to buy Workday: sources 01:32 Silver Lake in talks to buy Workday: sources\n\n   ### Image 8: S&P 500 notches record-high close as rate-hike worries ease 02:17 S&P 500 notches record-high close as rate-hike worries ease\n\n   ### Image 9: Over-hyped market due for a pullback, investor says 01:12 Over-hyped market due for a pullback, investor says\n\n   ### Image 10: Fed's 2% goal still tough despite 'benign' inflation data, expert says 01:43 Fed's 2% goal still tough despite 'benign' inflation data, expert says [...] Emotional Artemis ",
+      "source": "Tavily/Exa",
+      "url": "https://www.reuters.com/video/watch/idRW555114082026RP1",
+      "date": "Fri, 14 Aug 2026 20:29:11 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "How we react to anxiety could be just as important as the anxiety itself - PsyPost",
+      "evidence": "Despite its evolutionary utility, anxiety can become highly impairing in modern life. A person worried about being fired from a job might spend excessive time checking their work, which paradoxically increases their risk of making errors. This paradox led researchers to investigate whether the transition from normal anxiety to a clinical disorder depends on how a person reacts to those internal warning signals. Max Z. Roberts, a psychology researcher at the University at Albany and Duke University, and his colleagues hypothesized that psychological inflexibility might be a driving factor. [...] ### Science of Money\n\n The “perfect” AI face may be turning shoppers off\n A Chicago economist link",
+      "source": "Tavily/Exa",
+      "url": "https://www.psypost.org/how-we-react-to-anxiety-could-be-just-as-important-as-the-anxiety-itself/",
+      "date": "Mon, 10 Aug 2026 11:00:39 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Forex MasterMind Review 2026: Low-Trust Gold Signals on Telegram",
+      "evidence": "Reply\n 2\n\n  Rogers Hannah 5 months\n\n  Forex MasterMind’s Telegram channel is a textbook example of why traders should be wary of signal services. Their 1:1 risk/reward ratio demands a win rate over 50% just to break even, yet their actual performance falls short, leading to consistent losses. The channel’s countertrend bias in a bullish market further exacerbates the problem, as attempting to short during upward trends increases the likelihood of being stopped out. Additionally, their rigid 60-pip targets and stops fail to account for market volatility, making their strategy inflexible and ineffective. Without audited performance records or transparent risk disclosures, Forex MasterMind appe",
+      "source": "Tavily/Exa",
+      "url": "https://coinspot.io/en/reviews/forex-mastermind",
+      "date": "Sun, 30 Aug 2026 11:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Universal Crypto Signals Telegram Review: Worth Trusting Or Scam?",
+      "evidence": "When searching for reliable trading alerts, many traders stumble upon reviews of Universal Crypto Signals. This service has been active since 2018 and",
+      "source": "Tavily/Exa",
+      "url": "https://coinspot.io/en/reviews/universal-crypto-signals",
+      "date": "Fri, 28 Aug 2026 06:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Why Are Communication Stocks Back In Focus As defensive cash flows meeting infrastructure investment demands Shapes London Trading?",
+      "evidence": "Communication Stocks are active in the London market conversation after a constructive Friday session in which the London large-cap benchmark finished higher and investors remained selective beneath the headline index move. The immediate backdrop for this category is defensive cash flows meeting infrastructure investment demands. That theme matters because it links the market's broad risk tone with a more demanding assessment of subscriber trends, pricing, network investment and media spending. Friday's trading did not create a uniform signal for every company. Instead, it reinforced a familiar feature of the current UK market: supportive index conditions can coexist with sharp stock-level d",
+      "source": "Tavily/Exa",
+      "url": "https://kalkinemedia.com/uk/stocks/communication/why-are-communication-stocks-back-in-focus-as-defensive-cash-flows-meeting-infrastructure-investment-demands-shapes-london-trading",
+      "date": "Fri, 14 Aug 2026 06:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Fed Russian Insiders Review 2026: Telegram Crypto Trading Signals",
+      "evidence": "## Potential Benefits of the Service\n\nFRI promotes several selling points to attract traders who want a high-frequency crypto signal telegram experience.\n\n Claimed high accuracy:The group says most of its alerts close in profit, with an advertised hit rate above 90%.\n Claimed high returns:It also markets very large potential monthly ROI, suggesting users can scale capital quickly if they follow the signals correctly.\n Large signal volume:FRI says it provides around 250 alerts per month, which may appeal to active traders looking for frequent setups across more than one coin.\n Detailed signal format:The service says each alert includes practical trade information such as entry zone, targets, ",
+      "source": "Tavily/Exa",
+      "url": "https://coinspot.io/en/best-crypto-trading-telegram/fed-russian-insiders",
+      "date": "Fri, 21 Aug 2026 06:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "10 Best Copy Trading Platforms in 2026 — Tested, and Compared",
+      "evidence": "## What Real Copy Traders Want to Know!\n\nExplore the Top Questions asked by real traders across the Globe. From common risks to minimum capital requirements, we provide straightforward answers to help you understand copy trading and choose the right broker confidently.\n\nQ: How do I evaluate a copy trading provider’s performance beyond just their profit percentage? What metrics truly matter? – Alex Chen\n\nA:  Look beyond raw profit. Instead, focus on consistency, drawdown, risk metrics, average trade duration, and their trading style. Often, a consistent, lower-profit trader with good risk management is better than a high-profit, high-risk one.\n\nQ: What are the common risks associated with cop",
+      "source": "Tavily/Exa",
+      "url": "https://www.fxleaders.com/forex-brokers/copy-trading-platforms",
+      "date": "Fri, 28 Aug 2026 06:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "What Is World Oil Fund Institution (WOFI) Crypto",
+      "evidence": "We use cookies to learn more about how you use our website and what we can improve. Continue to use our website by clicking \"Accept\". Details\n\nTrader Affiliates\n\nScan QR to download\n\nMore download options\n\n + 简体中文交易平台 简体中文\n  + 繁體中文交易平臺 繁體中文\n  + Tiếng Việt Tiếng Việt\n  + ไทย ไทย\n  + Indonesia Indonesia\n  + Melayu Melayu\n  + 한국어 한국어\n  + Español Español\n  + हिन्दी हिन्दी\n  + தமிழ் தமிழ்\n  + Português Português\n\nLogo Icon\n\n Trading Market\n\n  + - ### Trade\n\n      Start the trading journey CFD Trading Demo Account Costs and Fees Trading Account Trading Terms\n    - ### Market\n\n      Forex Commodities Indices Stocks\n + - TOPONE Markets APP Web Trader MetaTrader 5 Platform Comparison\n + - Trader Sign",
+      "source": "Tavily/Exa",
+      "url": "https://www.top1markets.com/insights/crypto/what-is-world-oil-fund-institution-wofi-crypto-is-it-legit-or-a-scam-f28",
+      "date": "Fri, 28 Aug 2026 05:00:00 GMT",
+      "confidence": 0.65
+    },
+    {
+      "pain_point": "Bitcoin Bull Run Returns? Trade Crypto with 100x Leverage, No KYC and Exclusive Bonuses on BexBack  | Markets Insider",
+      "evidence": "Against this backdrop, BexBack  is giving traders another way to participate in the market with up to 100x leverage, No KYC, a $50 Welcome Bonus, and a 100% Deposit Bonus .\n\nBitcoin Is Moving Again — and Traders Are Paying Attention\n\nThe latest Bitcoin rally has been remarkably fast.\n\nBTC broke above $70,000 after a sharp rebound and subsequently pushed beyond $75,000. Market reports have linked the move to a combination of improving liquidity expectations, renewed institutional demand, short covering and growing optimism surrounding U.S. crypto regulation.\n\nFor active traders, however, a fast-moving market is about more than simply buying and holding Bitcoin. [...] Of course, leverage works",
+      "source": "Tavily/Exa",
+      "url": "https://markets.businessinsider.com/news/stocks/bitcoin-bull-run-returns-trade-crypto-with-100x-leverage-no-kyc-and-exclusive-bonuses-on-bexback-1036482582",
+      "date": "Fri, 21 Aug 2026 16:00:00 GMT",
+      "confidence": 0.65
+    }
+  ],
+  "adapter_status": "live: Tavily, Exa"
+}
